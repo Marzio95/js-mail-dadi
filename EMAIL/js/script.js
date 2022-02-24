@@ -7,7 +7,7 @@ console.log(arrayEmail);
 
 let emailUtente = prompt('Email Utente:');
 console.log(emailUtente);
-document.writeln(`Email Utente: ${emailUtente}`);
+containerOfHtml.innerHTML = `<div>Email Utente: ${emailUtente}</div>`;
 
 let research = false;
 
