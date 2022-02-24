@@ -16,7 +16,7 @@ for (let numEmail = 0; numEmail < arrayEmail.length; numEmail++) {
         research = true;
     }
 } if (research == false) {
-    document.writeln("la tua email non è nell'elenco");
+    document.writeln("La tua email non è presente nell'elenco, quindi non puoi accedere");
 } else {
-    document.writeln('puoi accedere');
+    document.writeln('Con questa email puoi accedere');
 }
