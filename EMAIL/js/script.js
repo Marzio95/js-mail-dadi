@@ -14,7 +14,7 @@ titolo.innerHTML = 'Selettore Email'
 let buttonAnnulla = document.createElement('button')
 containerOfHtml.append(buttonAnnulla)
 buttonAnnulla.innerHTML = 'Annulla'
-
+buttonAnnulla.style.marginBottom = '1rem'
 
 
 let arrayEmail = ["marzio@email", "marco@email", "mario@email", "maro@email", "marzo@email", "mazio@email", "mazo@email", "arzio@email", "fazio@email",];
@@ -23,6 +23,10 @@ let inuputButton = document.getElementById('email_utente')
 
 const cercaButton = document.getElementById('cerca')
 cercaButton.style.margin = '0.5rem'
+
+
+let output = document.createElement('div')
+containerOfHtml.append(output)
 
 cercaButton.addEventListener('click', funzioneVerificaEmail);
 function funzioneVerificaEmail() {
@@ -36,19 +40,21 @@ function funzioneVerificaEmail() {
         }
     }
     if (research == false) {
-        containerOfHtml.innerHTML += `<div>La tua email non è presente nell'elenco, quindi non puoi accedere</div>`;
+        output.innerHTML = "La tua email non è presente nell'elenco, quindi non puoi accedere";
       
     } else {
-        containerOfHtml.innerHTML += `<div>Con questa email puoi accedere</div>`;
+        output.innerHTML = `Con questa email puoi accedere`;
     }
 
 }
 
+
+
 buttonAnnulla.addEventListener('click', funzioneAnnullaRicera);
 function funzioneAnnullaRicera(){
-    containerOfHtml.style.background = 'red'
-    
-      
+    containerOfHtml.style.background = 'red'      
 }
+
+
 
 
